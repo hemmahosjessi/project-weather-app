@@ -80,26 +80,29 @@ const getWeatherData = (data) => {
 
   const decimal = (data.main.temp).toFixed(1) // 
 
+  // COMMENT IN WHEN TESTED THE PICS!!
+
   // a variable for main images depending on the weather comes from JSON
-  const idForMainImage = data.weather[0].main
+  // const idForMainImage = data.weather[0].main
   // to change the bg-image depending on the data weather
-  mainContainer.style.backgroundImage = `url(./Designs/Design-1/mainImages/${idForMainImage}.png)`
+  // mainContainer.style.backgroundImage = `url(./Designs/Design-1/mainImages/${idForMainImage}.png)`
 
   weatherContainer.innerHTML = `
+      <p>Todays weather</p>
       <h1>${decimal}°C</h1>
       <h2>${data.name}</h2>
       <h3>${data.weather[0].description}</h3>          
     `;
 
-    if (decimal >= 20) {
-      body.style.background = "orange"
-    }
-    else if (decimal < 20 && decimal > 10){
-      body.style.background = "blue"
-    }
-    else {
-      body.style.background = "white"
-    }
+    // if (decimal >= 20) {
+    //   body.style.background = "orange"
+    // }
+    // else if (decimal < 20 && decimal > 10){
+    //   body.style.background = "blue"
+    // }
+    // else {
+    //   body.style.background = "white"
+    // }
 
 
     const sunriseData = new Date(data.sys.sunrise * 1000) //Converts UNIX/EPOCH time to readable human time
@@ -110,9 +113,11 @@ const getWeatherData = (data) => {
     console.log(sunriseData, sunsetData)
 
     sunriseContainer.innerHTML = `
-    <h3>Sunrise ${sunriseString}</h3>`
+    <img class="sun-icon" src="./Designs/Design-1/mainImages/new_imgs/up.png">
+    <h3>${sunriseString}</h3>`
     sunsetContainer.innerHTML = `
-    <h3>Sunset ${sunsetString}</h3>`
+    <img class="sun-icon" src="./Designs/Design-1/mainImages/new_imgs/down.png">
+    <h3>${sunsetString}</h3>`
 
 }
 
