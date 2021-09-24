@@ -94,6 +94,7 @@ h4 {
 .forecast {
   display: flex;
   flex-direction: column;
+  padding-bottom: 2rem;
 }
 
 .forecast-days {
@@ -142,6 +143,18 @@ h4 {
   padding-right: 1.5rem;
   position: sticky;
   top: 0;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-around;
+  position: fixed;
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
