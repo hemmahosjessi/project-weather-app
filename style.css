@@ -43,11 +43,14 @@ h4 {
 
 .main-weather {
   display: block;
-  height: 300px;
-  width: 100%;
+  /* height: 300px; */
+  /* width: 100%; */
   background-repeat: no-repeat;
   background-size: cover;
   padding: 1rem;
+  background-color: #245A70;
+  border-radius: 12px;
+  margin: 0.5rem 0.5rem 0 0.5rem;
 }
 
 .weather {
@@ -61,7 +64,27 @@ h4 {
 .weather p {
   color: #fff;
   font-weight: 100;
+  font-weight: 100;
+  animation: spin 2s ease-in-out;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-fill-mode: none;
+  animation-play-state: running;
+  animation-name: textanimation;
 }
+
+@keyframes textanimation {
+
+  0% {
+    transform: translateX(-200%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
 
 .sun-time {
   display: flex;
@@ -95,6 +118,7 @@ h4 {
   display: flex;
   flex-direction: column;
   padding-bottom: 2rem;
+  /* margin: 0 2rem 0 2rem; */
 }
 
 .forecast-days {
@@ -189,22 +213,33 @@ h4 {
   .main-weather {
     display: block;
     height: 500px;
-    width: 100%;
+    /* width: 100%; */
     padding: 0;
     /* margin-bottom: 2rem; */
-    margin-top: 1rem;
+    margin: 2rem;
   }
   
   .weather {
     display: flex;
     flex-direction: column;
     padding-top: 3rem;
-    margin-left: 0;
+    margin: 0;
   }
   
   .weather p {
     color: #fff;
     font-weight: 100;
+  }
+
+  @keyframes textanimation {
+
+    0% {
+      transform: translateX(-400%);
+    }
+  
+    100% {
+      transform: translateX(0);
+    }
   }
 
   .sun-time {
@@ -236,11 +271,12 @@ h4 {
   .forecast {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    /* width: 100%; */
     grid-column-gap: 1rem;
     grid-row-gap: 1rem;
-    margin-left: 2rem;
-    margin-right: 2rem;
-    /* margin-top: 2rem; */
+      margin: 0 2rem 0 2rem;
+    /* margin-left: 2rem;
+    margin-right: 2rem; */
   }
 
   .forecast-days {
@@ -249,8 +285,8 @@ h4 {
     align-items: center;
     padding: 4rem 1rem 4rem 1rem;
     border-radius: 12px;
-    /* margin: 1rem 0.5rem 0 0rem; */
     width: 100%;
+    margin: 0;
   }
 
   .icons {
@@ -264,6 +300,7 @@ h4 {
   .iconandtemp {
     flex-direction: column;
     margin: 0;
+    gap: 1rem;
   }
 
   .footer {
@@ -285,12 +322,9 @@ h4 {
   font-family: raleway;
   font-weight: 100;
   font-size: 1.5rem;
-  /* line-height: 20px; */
   height: 64px;
   border-radius: 32px;
   width: 50%;
-  /* padding-left: rem;
-  padding-right: 3rem; */
   position: sticky;
   top: 0;
 }
@@ -340,7 +374,7 @@ h4 {
     /* background-repeat: no-repeat;
     background-size: cover; */
     padding: 0;
-    margin-bottom: 2rem;
+    margin: 2rem 0 2rem 0;
   }
   
   .weather {
@@ -348,12 +382,23 @@ h4 {
     flex-direction: column;
     align-items: flex-start;
     padding-top: 3rem;
-    margin-left: 0;
+    margin-left: 4rem;
   }
   
   .weather p {
     color: #fff;
     font-weight: 100;
+  }
+
+  @keyframes textanimation {
+
+    0% {
+      transform: translateX(-400%);
+    }
+  
+    100% {
+      transform: translateX(0);
+    }
   }
   
   .sun-time {
@@ -363,9 +408,9 @@ h4 {
     align-items: left;
     gap: 3rem;
     margin-top: 1rem;
-    margin-left: 0;
-    margin-bottom: 4rem;
-    margin-top: 4rem;
+    margin-left: 4rem;
+    margin-bottom: 2rem;
+    margin-top: 3rem;
   }
   
   .sun-icon {
@@ -393,7 +438,9 @@ h4 {
     grid-template-rows: repeat(5, 1fr);
     grid-column-gap: 1rem;
     grid-row-gap: 1rem;
+    margin-top: 0;
   }
+
 
   .forecast-days {
     flex-direction: column;
@@ -401,8 +448,41 @@ h4 {
     align-items: center;
     padding: 2rem 1rem 2rem 1rem;
     border-radius: 12px;
-    margin: 1rem 0.5rem 0 0rem;
     width: 100%;
+    margin: 0;
   }
 
+
+  .iconandtemp {
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+    margin-right: 0;
+  }
+
+  .icons {
+    width: 80px;
+  }
+
+  .forecast-days h4 {
+    font-size: 22px;
+  }
+
+
+.city-button {
+  height: 64px;
+  border-radius: 32px;
+  width: 30%;
+}
+
+.city-button:hover {
+  /* transition: ease-in;
+  box-shadow: blueviolet, 1px;
+  transition-duration: 0.5s;;
+  background-color: blue; */
+  /* position: relative;
+  transform: scale(1.1);
+  transition-property: all;
+  transition-duration: 0.4s;
+  } */
 }
