@@ -6,6 +6,7 @@ body {
   background-color: #316B83;
   margin: 0;
   font-family: raleway;
+  padding-bottom: 5rem;
 }
 
 h1 {
@@ -189,6 +190,8 @@ h4 {
 
 .footer {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: space-around;
   position: fixed;
   padding-bottom: 2rem;
@@ -199,7 +202,31 @@ h4 {
   width: 100%;
 }
 
+.madeBy {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+.footerFox {
+  font-size: 2rem;
+}
+
+.footerNames {
+  color: #fff;
+  font-weight: 100;
+}
+
+
+
 @media (min-width: 768px) and (max-width: 991px) {
+
+  body {
+    padding-bottom: 7rem;
+  }
 
   h1 {
     font-size: 96px;
@@ -322,8 +349,9 @@ h4 {
   }
 
   .footer {
-  display: flex;
-  justify-content: space-around;
+  /* display: flex; */
+  flex-direction: column;
+  /* justify-content: space-around; */
   position: fixed;
   padding-bottom: 3rem;
   padding-top: 3rem;
@@ -355,7 +383,8 @@ h4 {
   body {
     padding-left: 10%;
     padding-right: 10%;
-    overflow: hidden;
+    padding-bottom: 7rem;
+    /* overflow: hidden; */
   }
 
   h1 {
@@ -453,7 +482,7 @@ h4 {
   .forecast {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(5, 1fr);
+    grid-template-rows: repeat(1, 1fr);
     grid-column-gap: 1rem;
     grid-row-gap: 1rem;
     margin-top: 0;

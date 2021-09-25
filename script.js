@@ -91,7 +91,8 @@ const getWeatherData = (data) => {
       <p>Todays weather</p>
       <h1>${decimal}°C</h1>
       <h2>${data.name}</h2>
-      <h3>${data.weather[0].description}</h3>          
+      <h3>${data.weather[0].description}</h3>  
+
     `;
 
     // if (decimal >= 20) {
@@ -147,7 +148,7 @@ const getWeatherData = (data) => {
       <h4 class="day"> ${days} </h4>
       </div>
       <div class="iconandtemp">
-      <img id="iconID" class="icons" alt="" src="./Designs/Design-1/icons/${idForIcons}.png">
+      <img id="iconID" class="icons" alt="" src="./Designs/Design-1/icons/${idForIcons}.svg">
       <h4 class="temp"> ${decimal}°C</h4>
       </div>
     </div>
@@ -196,8 +197,8 @@ Add 1 more city?          ---- team ✅
 More Main pictures  ----clear/clouds/drizzle/rain/snow/thunderstorm/ xx night/partly-cloudly(=not weather)xx (openweathermap.org/weather-conditions)
 the .GIF icon
 
-Icons for sunset & sunrise
-Animation on todays weather
+Icons for sunset & sunrise ✅
+Animation on todays weather ✅
 STYLING.
 Get the description to start with a capital letter?
 
