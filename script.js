@@ -113,10 +113,10 @@ const getWeatherData = (data) => {
     console.log(sunriseData, sunsetData)
 
     sunriseContainer.innerHTML = `
-    <img class="sun-icon" src="./Designs/Design-1/mainImages/new_imgs/up.png">
+    <img class="sun-icon" src="./Designs/Design-1/mainImages/up.png">
     <h3>${sunriseString}</h3>`
     sunsetContainer.innerHTML = `
-    <img class="sun-icon" src="./Designs/Design-1/mainImages/new_imgs/down.png">
+    <img class="sun-icon" src="./Designs/Design-1/mainImages/down.png">
     <h3>${sunsetString}</h3>`
 
 }
